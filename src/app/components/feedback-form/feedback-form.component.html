@@ -1,0 +1,49 @@
+<div class="feedback-container">
+  <div class="wrapper-container">
+    <!-- Feedback content -->
+    <div class="leftside">
+      <div class="leftside-mobile">
+        <div class="test">
+          <div class="mobile-view-wrapper">
+            <div
+              *ngFor="let item of ratings; let i = index"
+              class="rating-row"
+            >
+              <span class="rating-label">
+                ({{ 'A B C D E F'.split(' ')[i] }}) {{ item.label }}
+              </span>
+
+              <div class="stars" style="padding-left: 1rem">
+                <mat-icon
+                  *ngFor="let star of [1, 2, 3, 4, 5]"
+                  (click)="setRating(i, star)"
+                  [ngClass]="{ 'active-star': star <= item.value }"
+                >
+                  {{ star <= item.value ? 'star' : 'star_border' }}
+                </mat-icon>
+              </div>
+            </div>
+          </div>
+
+          <div class="mobile-image-right"></div>
+        </div>
+
+        <div class="comment-section">
+          <label for="comments">Other Comments:</label><br />
+          <textarea
+            id="comments"
+            [(ngModel)]="comment"
+            rows="3"
+            class="textarea"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: center; align-items: center">
+    <button (click)="submitFeedback()" class="submitFeedback">
+      Submit Feedback
+    </button>
+  </div>
+</div>
