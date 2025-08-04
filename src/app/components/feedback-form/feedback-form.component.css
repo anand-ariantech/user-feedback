@@ -1,9 +1,9 @@
 .feedback-container {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   font-family: "Arial", sans-serif;
   line-height: 1.6;
   padding: 1rem;
+
 }
 
 .wrapper-container {
@@ -15,7 +15,17 @@
 }
 
 .leftside {
-  padding: 3rem;
+
+
+  margin: auto;
+  width: 100%;
+  max-width: 700px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .leftside-mobile {
@@ -58,17 +68,20 @@
 
 .comment-section {
   margin-top: 24px;
+  width: 100%;
 }
 
 .textarea {
-  width: 70%;
+  width: 100%;
   padding: 10px;
   background-color: gainsboro;
   border: none;
   border-radius: 4px;
   resize: vertical;
   font-size: 15px;
+  box-sizing: border-box;
 }
+
 
 .submitFeedback {
   background-color: #00509d;
@@ -111,8 +124,11 @@
     padding: 10px;
   }
 
+
   .leftside {
-    padding: 0;
+    padding: 1rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
   }
 
   .test {
