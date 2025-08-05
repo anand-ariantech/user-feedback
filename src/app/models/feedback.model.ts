@@ -14,8 +14,3 @@ export interface Feedback {
 
 }
 
-
-// export type PurchasePotential = 'Definitely' | 'Very likely' | 'Likely' | 'Not Likely';
-
-// export type TimeFrame = '< 15 days' | '15 days – 3 months' | '3 – 6 months' | '> 6 months';
-
