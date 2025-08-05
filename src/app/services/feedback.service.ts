@@ -8,12 +8,12 @@ import { Feedback } from "../models/feedback.model";
   providedIn: 'root'
 })
 export class FeedbackService {
-  private baseUrl = `${environment.apiBaseUrl}api/global/user/submit-feedback`;
+  private baseUrl = `${environment.apiBaseUrl}api/global/user`;
 
   constructor(private http: HttpClient) {}
 
   submitFeedback(userId: string, feedback: Feedback): Observable<any> {
-    const url = `${this.baseUrl}?userId=${userId}`;
+    const url =  `${this.baseUrl}/submit-feedback/${userId}`;
     return this.http.put<any>(url, feedback);
   }
 }
